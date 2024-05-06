@@ -1,0 +1,42 @@
+<?php
+session_start(); // Make sure to start the session at the beginning of your PHP file
+
+// Assuming you have stored the user's name in a session variable called 'user_name'
+$brukernavn = $_SESSION['username'];
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="images/MicrosoftTeams-image.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="topnav">
+    <a class="active" href="Home.php">Home</a>
+    <a href="prossesor.php">komponentene</a>
+    <a href="skole.php">Skole</a>
+    <a href="begreper.php">Begreper</a>
+    <a href="FAQ.html">FAQ</a>
+    <a href="loginforphp.php">Log inn</a>
+    <a href="registration.php">Registrer</a>
+    <div class="WelcomeuserContainer">
+    </div>
+  </div>
+  </div>
+  <div class="logoforwebSide">
+    <img src="images/hacker.png" class="logoWeb">
+  </div>
+  <br>
+  <br>
+  <p class="maintitleStyle">LOG INN SUKSESS!</p>
+  <p class="ppp">Trykk på <a href="loginhome.php" class="hjemStyleknapp">Hjem</a> knappen for å gå tilbake til hjemme
+    siden.</p>
+  <img src="images/wdw.gif" class="suksessLogo">
+</body>
+
+</html>

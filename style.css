@@ -1,0 +1,1625 @@
+body {
+  margin: 0;
+  background-color: rgb(29, 28, 28);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.registerknapp {
+  color: rgb(233, 233, 233);
+}
+
+.infoadmincontainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border: 1px solid #dddddd;
+}
+
+/* Define table header style */
+th {
+  background-color: #f2f2f2;
+  border: 1px solid #dddddd;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Define table data style */
+td {
+  border: 1px solid #dddddd;
+  padding: 10px;
+}
+
+/* Define alternating row color */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+
+
+.ppp {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 250%;
+  color: limegreen;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.newheadlineforschool {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: xx-large;
+  color: rgb(17, 211, 17);
+  text-align: center;
+}
+
+.linjevgs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.imageofprogrrammign {
+  width: 700px;
+  height: auto;
+}
+
+h2 {
+  padding: 0;
+  margin: 0;
+}
+
+.borderstyletag {
+  border: solid;
+  border-color: #029a62;
+  border-radius: 83px;
+}
+
+.borderstyletag:hover {
+  border-color: #023f29;
+}
+
+.inputtagstyle {
+  border: solid;
+  border-color: lime;
+  border-radius: 80px;
+  padding: 13px;
+}
+
+.priectagcontaier {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.priectag {
+  color: rgb(226, 226, 226);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+}
+
+.cartcentertext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+}
+
+.mycartcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.shoppingcartcentercontainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.shoppingcartcontainer {
+  background-color: rgb(6, 134, 28);
+  width: 400px;
+  height: 700px;
+}
+
+.row {
+  display: -ms-flexbox;
+  /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap;
+  /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%;
+  /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%;
+  /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%;
+  /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=textt] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+
+.shoppingcartIcon {
+  width: 60px;
+  height: auto;
+}
+
+.imagesizeofitems {
+  width: 300px;
+  height: auto;
+}
+
+.checkoutbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Formcontainers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+
+
+
+.checkoutbtnStyle {
+  background-color: #04aa6d;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 10px;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.checkoutbtnStyle:hover {
+  background-color: #035c3b;
+}
+
+
+.cartItemName {
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+}
+
+.cartItemPrice {
+  color: yellow;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+}
+
+
+#totalPrice {
+  color: yellow;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+}
+
+.totalPriceContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+}
+
+.totalprioe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 250px;
+  margin-right: 300px;
+}
+
+.videoStyle {
+  background-color: white;
+  height: auto;
+  width: 900px;
+}
+
+.centerofbtnkuben {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newkubenvgsStyle:hover {
+  background-color: rgb(1, 56, 38);
+}
+
+.newkubenvgsStyle {
+  background-color: rgb(4, 143, 4);
+  width: 200px;
+  height: auto;
+  border-radius: 20px;
+}
+
+.kubenvgsnewstylebtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-decoration: none;
+  font-size: 150%;
+}
+
+#video {
+  background-color: white;
+  height: auto;
+  width: 900px;
+}
+
+.videoCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Knapperinfostyle {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 250%;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.utforstknapp {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 250%;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.logoforwebSide {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.welcomeUser {
+  float: left;
+  color: limegreen;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.WelcomeuserContainer {
+  display: flex;
+  justify-content: end;
+  padding-right: 105px;
+  padding-bottom: 20px;
+}
+
+.passordStyle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.registartionStyle {
+  font-size: xx-large;
+  background-color: rgb(12, 53, 12);
+  border-radius: 900px;
+}
+
+.totalPriceContainer {
+  padding-top: 9px;
+}
+
+.brukernavnStyle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.loginstyle {
+  font-size: xx-large;
+  background-color: rgb(12, 53, 12);
+  border-radius: 900px;
+}
+
+.venligstloginn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 620px;
+}
+
+.brukernavnogloginn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.passordstyle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.lagnybruker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.KubenvgsBtn {
+  color: limegreen;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+
+.submitbtn {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.submitbtnstyle:hover {
+  color: hotpink;
+}
+
+.begreprHeadingPosistion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.thisisatest {
+  color: white;
+  border: solid;
+  border-color: #029a62;
+  border-radius: 83px;
+}
+
+.submitbtnstyle {
+  font-weight: bolder;
+  color: white;
+  background-color: rgb(15, 179, 15);
+  border-radius: 20px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  width: 85px;
+  height: auto;
+  padding: 5px;
+}
+
+.ibm-plex sans-semibold {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal l;
+}
+
+.logoWeb {
+  width: 5%;
+  height: auto;
+}
+
+section {
+  min-height: 100vh;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 3rem;
+  margin: 2rem 0rem;
+  color: white;
+}
+
+.hjemStyleknapp:hover {
+  color: red;
+}
+
+.hjemStyleknapp {
+  color: white;
+}
+
+.faqDesign {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}
+
+.faq {
+  max-width: 700px;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid lightgreen;
+  cursor: pointer;
+}
+
+.sectionStyle {
+  background-color: rgb(66, 60, 60);
+  border-radius: 300px;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question h3 {
+  font-size: 1.4rem;
+}
+
+.answer p {
+  padding-top: 1rem;
+  line-height: 1.6;
+  font-size: 1.4rem;
+}
+
+.lagbrukerKnapp {
+  color: rgb(21, 231, 21);
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.4 ease;
+}
+
+.faq.active .answer {
+  max-height: 300px;
+  animation: fade 1s ease-in-out;
+  /* for å gi teksten animasjon for å bli usyunlig og komme tilbake */
+}
+
+.faq.active svg {
+  transform: rotate(180deg);
+}
+
+svg {
+  transition: transform 0.2s ease-in;
+}
+
+@keyframes fade {
+
+  /* keyframes for å gi teksten en animasjon for at den skal forsvinne og komme tilbake */
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.loginsucessText {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 275%;
+  color: rgb(13, 145, 13);
+  text-align: center;
+}
+
+.unvalidText {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 400%;
+  color: red;
+  text-align: center;
+}
+
+.lagbrukterTeskt {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 275%;
+  color: deepskyblue;
+  text-align: center;
+}
+
+.knappStrek:hover {
+  color: rgb(19, 236, 236);
+}
+
+.knappStrek {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 105%;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.titleHome {
+  text-align: center;
+  justify-content: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 300%;
+  color: limegreen;
+}
+
+.titleYO {
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: xx-large;
+  color: limegreen;
+}
+
+.SkoleTeskt {
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 300%;
+  color: limegreen;
+}
+
+.gifBro {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 6%;
+}
+
+.feilLogo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 6%;
+}
+
+.suksessLogo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 7%;
+}
+
+.centerforitemstest {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.Containerofitems {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.Containerofcontainers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #029a62;
+  height: auto;
+  width: 500px;
+}
+
+.Imageitemsize {
+  height: 350px;
+  width: 350px;
+  padding: 30px;
+}
+
+.imageinformationsize {
+  height: 350px;
+  width: 350px;
+  margin-top: 50px;
+}
+
+.Headlineforproductinfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.Iteminformationinfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.itemdescriptionStyle {
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 2.3rem;
+  padding: 130px;
+}
+
+.imgsrcontainerforitemdescripotion {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+
+.Productnameinformaiton {
+  color: white;
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.9rem;
+  padding: 0;
+  margin: 0;
+}
+
+.quicktest {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.Itemnameshop {
+  color: white;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 28px;
+}
+
+.itemnameshopTwo {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.Priceofitem {
+  background-color: limegreen;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.pricetagstyle {
+  color: rgb(255, 255, 255);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.7rem;
+  height: auto;
+  width: 250px;
+}
+
+.itemnameshopThree {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+#ramhideandshow {
+  padding: 5px;
+}
+
+#gpuhideandshow {
+  padding: 5px;
+}
+
+.showinfoandhideStyle {
+  margin-bottom: 30px;
+  background-color: rgb(47, 97, 47);
+  border-radius: 10px;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.showinfoandhideStyle:hover {
+  background-color: rgb(23, 51, 23);
+}
+
+
+.changeofsize {
+  width: 30px;
+  height: 30px;
+}
+
+.itemdescirptiondefinintionStyle {
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+
+.purchasebtnshop {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: rgb(6, 133, 6);
+  padding: 5px;
+  border-radius: 30px;
+}
+
+.purchasebtnshop:hover {
+  background-color: rgb(2, 82, 2);
+}
+
+.Shoptitlename {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.pcimg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 38%;
+}
+
+.cpu {
+  background-color: white;
+  padding: 20px;
+  border-radius: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 18%;
+}
+
+.gpu {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 18%;
+}
+
+.hovedkort {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 18%;
+}
+
+.corsairRam {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 18%;
+}
+
+.kabinettBilde {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 18%;
+}
+
+.vifterforPC {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 18%;
+}
+
+.kjølingBilde {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 18%;
+}
+
+.herstyle {
+  color: limegreen;
+}
+
+.pp {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: xx-large;
+  color: rgb(17, 211, 17);
+  text-align: center;
+}
+
+.DatabasepTag {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: xx-large;
+  color: rgb(17, 211, 17);
+  text-align: center;
+}
+
+.forkalringStyle {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: x-large;
+  color: rgb(17, 211, 17);
+  text-align: center;
+}
+
+.bildeunderTekst {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 105%;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.maintitleStyle {
+  color: limegreen;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.velkommenHeadline {
+  color: limegreen;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.forklaringavbegreperHeadline {
+  color: limegreen;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.skoleHeadline {
+  color: limegreen;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.previewofkuben {
+  width: 975px;
+  height: auto;
+}
+
+.btngoogleStlye:hover {
+  color: red;
+}
+
+.btngoogleStlye {
+  color: white;
+}
+
+.locationGIF {
+  width: 120px;
+  height: auto;
+}
+
+.locationCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centeritems {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.imgcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wikipediaStyle:hover {
+  color: red;
+}
+
+.wikipediaStyle {
+  color: white;
+  text-decoration: none;
+}
+
+.formfaktorPreview {
+  width: 600px;
+  height: auto;
+}
+
+.formfaktorCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.ppYO {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: xx-large;
+  color: rgb(13, 145, 13);
+  text-align: center;
+}
+
+.button {
+  background-color: #09640c;
+  /* Green */
+  color: rgb(255, 255, 255);
+  padding: 15px 15px;
+  text-align: center;
+  justify-content: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0px 870px;
+}
+
+.buttonYO {
+  background-color: #09640c;
+  /* Green */
+  color: rgb(255, 255, 255);
+  padding: 15px 15px;
+  text-align: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 0px 575px;
+}
+
+.centerbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #0f3c10;
+  /* Green */
+  color: white;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: limegreen;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 23px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.activee {
+  background-color: #04aa6d;
+  color: white;
+}
+
+.kubenVGS {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 39%;
+}
+
+.hvit {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: xx-large;
+  color: rgb(255, 255, 255);
+}
+
+.lagdnyBruker {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: xx-large;
+  color: rgb(255, 255, 255);
+}
+
+.venligstlogintextStyle {
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: xx-large;
+  color: rgb(255, 255, 255);
+}
+
+.oprettnybrukerStyle {
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: xx-large;
+  color: rgb(255, 255, 255);
+}
+
+.phpbtntag {
+  color: limegreen;
+}
+
+.colorWhite {
+  color: white;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1700px) {
+  .ppp {
+    font-size: 25px;
+  }
+
+  .utforstknapp {
+    font-size: 25px;
+  }
+
+  .gifBro {
+    width: 65px;
+    height: auto;
+  }
+
+  .kubenVGS {
+    width: 405px;
+    height: auto;
+  }
+
+  .previewofkuben {
+    width: 650px;
+    height: auto;
+  }
+
+
+
+
+
+
+
+}
+
+@media (max-width: 1505px) {
+  .topnav a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1119px) {
+  .topnav a {
+    font-size: 13px;
+  }
+
+  .pp {
+    font-size: 20px;
+  }
+
+  .maintitleStyle {
+    font-size: 20px;
+  }
+
+  .cpu {
+    width: 150px;
+    height: auto;
+  }
+}
+
+@media (max-width: 1300px) {
+  .topnav a {
+    font-size: 17px;
+  }
+
+  .pp {
+    font-size: 20px;
+  }
+
+  .maintitleStyle {
+    font-size: 20px;
+  }
+
+  .cpu {
+    width: 150px;
+    height: auto;
+  }
+
+  .velkommenHeadline {
+    font-size: 35px;
+  }
+
+  .forklaringavbegreperHeadline {
+    font-size: 30px;
+  }
+
+  .skoleHeadline {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .topnav a {
+    font-size: 10px;
+  }
+
+  .pp {
+    font-size: 15px;
+  }
+
+  .ppp {
+    font-size: 25px;
+  }
+
+  .maintitleStyle {
+    font-size: 15px;
+  }
+
+  .cpu {
+    width: 150px;
+    height: auto;
+  }
+
+  .velkommenHeadline {
+    font-size: 25px;
+  }
+
+  .forklaringavbegreperHeadline {
+    font-size: 15px;
+  }
+
+  .skoleHeadline {
+    font-size: 15px;
+  }
+
+  .kubenVGS {
+    width: 320px;
+    height: auto;
+  }
+
+  .buttonYO {
+    font-size: 10px;
+  }
+
+  .previewofkuben {
+    height: 220px;
+    width: auto;
+  }
+
+  .DatabasepTag {
+    font-size: 20px;
+  }
+
+  .forkalringStyle {
+    font-size: 20px;
+  }
+
+  .formfaktorPreview {
+    width: 420px;
+    height: auto;
+  }
+
+  .bildeunderTekst {
+    font-size: 12px;
+  }
+
+  .forkalringStyle {
+    font-size: 16px;
+  }
+
+  .forklaringavbegreperHeadline {
+    font-size: 22px;
+  }
+
+  .venligstlogintextStyle {
+    font-size: 20px;
+  }
+
+  .hvit {
+    font-size: 15px;
+  }
+
+  .submitbtnstyle {
+    font-size: 10px;
+  }
+
+  .lagdnyBruker {
+    font-size: 13px;
+  }
+
+  .oprettnybrukerStyle {
+    font-size: 20px;
+  }
+
+  .logoWeb {
+    width: 25px;
+    height: auto;
+  }
+}
+
+@media (max-width: 1030px) {
+  .ppp {
+    font-size: 18px;
+  }
+
+  .velkommenHeadline {
+    font-size: 25px;
+  }
+
+  .gifBro {
+    width: 65px;
+  }
+
+  .logoforwebSide {
+    padding-bottom: 10px;
+  }
+
+  .welcomeUser {
+    font-size: 15px;
+  }
+}
+
+.labelabvoetextstyle {
+  color: lime;
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: xx-large;
+  text-transform: uppercase;
+}
+
+.containerforpurchases {
+  background-color: rgb(83, 80, 80);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 150px;
+}
+
+.infopersonal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submitbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox;
+  /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap;
+  /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%;
+  /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%;
+  /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%;
+  /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+
+.checkouttxt {
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+}
+
+.bestiilingconfirm {
+  color: lime;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 3.5rem;
+}
+
+.containerthankyou {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.containerthankyouu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.orderidtext {
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 4.0rem;
+}
+
+.sakerheadline {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 3.2rem;
+  text-align: center;
+}
+
+.sakercontainersaker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.submitbtnstylepadding {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 200px;
+  background-color: lime;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.sakerstyleinputfelt {
+  width: 250px;
+  height: 350px;
+  border: solid;
+  border-color: #04923a;
+  border-radius: 20px;
+  padding: 13px;
+}
+
+.inputstylecontainers {
+  margin-top: 15px;
+  border: solid;
+  border-color: #04923a;
+  border-radius: 20px;
+  padding: 13px;
+}
+
+.submitbtnstylepadding:hover {
+  background-color: rgb(8, 121, 8);
+}
+
+.containercenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 225px;
+}
+
+.textstyletwo {
+  color: white;
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2.3rem;
+}
+
+.ticketidtext {
+  color: white;
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2.8rem;
+}
+
+.backgroundcolorforsaker {
+  background-color: #0d4402;
+  border-radius: 200px;
+}

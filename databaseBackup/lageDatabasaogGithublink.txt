@@ -1,0 +1,10 @@
+create database Pcinfo;
+
+use Pcinfo;
+
+create table info_om_Kunde (
+    username varchar(40),
+    password varchar(40)
+);
+
+Github link: https://github.com/ErenGithubProgramming/Termin-oppgave

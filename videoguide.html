@@ -1,0 +1,49 @@
+<?php
+session_start(); // Make sure to start the session at the beginning of your PHP file
+
+// Assuming you have stored the user's name in a session variable called 'user_name'
+$brukernavn = $_SESSION['username'];
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="images/pcimg.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knapper-Info</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,600;1,600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="topnav">
+    <a class="active" href="Home.php">Home</a>
+    <a href="prossesor.php">komponentene</a>
+    <a href="skole.php">Skole</a>
+    <a href="begreper.php">Begreper</a>
+    <a href="FAQ.html">FAQ</a>
+    <a href="loginforphp.php">Log inn</a>
+    <a href="registration.php">Registrer</a>
+  </div>
+  <div class="WelcomeuserContainer">
+  </div>
+  </div>
+  <div class="logoforwebSide">
+    <img src="images/hacker.png" class="logoWeb">
+  </div>
+  <br>
+  <h2 class="ppp">Gjennomgang av websiden!</h2>
+  <div class="videoCenter">
+    <video id="video" controls poster="play.jpg" onclick="this.play();">
+      <source src="images/websiteguide.mp4" type="video/mp4">
+    </video>
+  </div>
+
+
+</body>
+
+</html>
