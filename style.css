@@ -34,6 +34,7 @@ th {
   text-align: left;
 }
 
+
 /* Define table data style */
 td {
   border: 1px solid #dddddd;
@@ -231,6 +232,7 @@ span.price {
 .shoppingcartIcon {
   width: 60px;
   height: auto;
+
 }
 
 .imagesizeofitems {
@@ -1622,4 +1624,8 @@ span.price {
 .backgroundcolorforsaker {
   background-color: #0d4402;
   border-radius: 200px;
+}
+
+.mycarttext {
+  color: white;
 }

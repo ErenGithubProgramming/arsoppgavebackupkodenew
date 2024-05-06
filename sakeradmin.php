@@ -31,11 +31,11 @@ $brukernavn = $_SESSION['brukernavn'];
         <a href="prossesor.php" class="borderstyletag">komponentene</a>
         <a href="skole.php" class="borderstyletag">Skole</a>
         <a href="begreper.php" class="borderstyletag">Begreper</a>
-        <a href="FAQ.html" class="borderstyletag">FAQ</a>
+        <a href="FAQ.php" class="borderstyletag">FAQ</a>
+        <a href="saker.php" class="borderstyletag">Legg Ut Sak</a>
+        <a href="Items.php" class="borderstyletag">Kjøp!</a>
         <a href="loginforphp.php" class="borderstyletag">Log inn</a>
         <a href="registration.php" class="borderstyletag">Registrer</a>
-        <a href="Items.php" class="borderstyletag">Kjøp!</a>
-        <a href="saker.php" class="borderstyletag">Legg Ut Sak</a>
         <?php
         // Check if the user is logged in
         if (isset($_SESSION['username'])) {
@@ -57,7 +57,7 @@ $brukernavn = $_SESSION['brukernavn'];
         <img src="images/hacker.png" class="logoWeb">
     </div>
     <div class="infoadmincontainer">
-        <p class="velkommenHeadline">Saker Lagt Ut Av Kunder</p>
+        <p class="ppp">Saker Lagt Ut Av Kunder</p>
         <!-- Step 3: Display the data on the website -->
         <table>
             <thead>

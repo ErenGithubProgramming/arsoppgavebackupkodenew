@@ -25,14 +25,15 @@ $brukernavn = $_SESSION['username'];
 
 <body>
     <div class="topnav">
-        <a class="active" href="Home.php">Home</a>
-        <a href="prossesor.php">komponentene</a>
-        <a href="skole.php">Skole</a>
-        <a href="begreper.php">Begreper</a>
-        <a href="FAQ.html">FAQ</a>
-        <a href="loginforphp.php">Log inn</a>
-        <a href="registration.php">Registrer</a>
-        <a href="Items.php">Kjøp!</a>
+        <a href="Home.php" class="borderstyletag">Home</a>
+        <a href="prossesor.php" class="borderstyletag">komponentene</a>
+        <a href="skole.php" class="borderstyletag">Skole</a>
+        <a href="begreper.php" class="borderstyletag">Begreper</a>
+        <a href="FAQ.php" class="borderstyletag">FAQ</a>
+        <a href="saker.php" class="borderstyletag">Legg Ut Sak</a>
+        <a href="Items.php" class="borderstyletag">Kjøp!</a>
+        <a href="loginforphp.php" class="borderstyletag">Log inn</a>
+        <a href="registration.php" class="borderstyletag">Registrer</a>
         <?php
         // Check if the user is logged in
         if (isset($_SESSION['username'])) {

@@ -31,11 +31,11 @@ $brukernavn = $_SESSION['brukernavn'];
         <a href="prossesor.php" class="borderstyletag">komponentene</a>
         <a href="skole.php" class="borderstyletag">Skole</a>
         <a href="begreper.php" class="borderstyletag">Begreper</a>
-        <a href="FAQ.html" class="borderstyletag">FAQ</a>
+        <a href="FAQ.php" class="borderstyletag">FAQ</a>
+        <a href="saker.php" class="borderstyletag">Legg Ut Sak</a>
+        <a href="Items.php" class="borderstyletag">Kjøp!</a>
         <a href="loginforphp.php" class="borderstyletag">Log inn</a>
         <a href="registration.php" class="borderstyletag">Registrer</a>
-        <a href="Items.php" class="borderstyletag">Kjøp!</a>
-        <a href="saker.php" class="borderstyletag">Legg Ut Sak</a>
         <?php
         // Check if the user is logged in
         if (isset($_SESSION['username'])) {
@@ -44,6 +44,13 @@ $brukernavn = $_SESSION['brukernavn'];
         } else {
             // If not logged in, display a message or redirect to the login page
             echo 'You are not logged in.';
+        }
+        ?>
+        <?php
+        // Display the "List of Participants" button if the user is an admin
+        if ($usertype === 'admin') {
+            echo '<a href="besttilingeradminpage.php" class="borderstyletag">Bestillinger</a>
+    <a href="sakeradmin.php" class="borderstyletag">Saker Fra kunde</a>'; // Add your button here
         }
         ?>
     </div>
@@ -57,7 +64,7 @@ $brukernavn = $_SESSION['brukernavn'];
         <img src="images/hacker.png" class="logoWeb">
     </div>
     <div class="infoadmincontainer">
-        <p class="velkommenHeadline">Bestillinger fra Kunde</p>
+        <p class="ppp">Bestillinger fra Kunde</p>
         <!-- Step 3: Display the data on the website -->
         <table>
             <thead>

@@ -1,8 +1,57 @@
 <?php
-session_start(); // Make sure to start the session at the beginning of your PHP file
+session_start();
 
-// Assuming you have stored the user's name in a session variable called 'user_name'
+// Step 1: Connect to the database
+$connection = mysqli_connect("localhost", "root", "Admin", "checkout");
+
+// Check connection
+if (!$connection) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+// Assuming you have stored the user's name in a session variable called 'brukernavn'
 $brukernavn = $_SESSION['username'];
+
+// Step 2: Retrieve data from the database based on the user's username
+$sql = "SELECT usertype FROM info_om_kunde WHERE brukernavn = '$brukernavn'";
+$result = mysqli_query($connection, $sql);
+
+// Check if query was successful and if the user is an admin
+if ($result && mysqli_num_rows($result) > 0) {
+  $row = mysqli_fetch_assoc($result);
+  $usertype = $row['usertype'];
+}
+
+// Retrieve the 'navn' parameter from the URL
+if (isset($_GET['brukernavn'])) {
+  $brukernavn = $_GET['brukernavn'];
+
+  // Step 3: Check if the user exists in the "pameldingsinfo" table
+  $sql_check_user = "SELECT COUNT(*) AS user_count FROM brukernavn WHERE brukernavn = '$brukernavn'";
+  $result_check_user = mysqli_query($connection, $sql_check_user);
+
+  // Check if query was successful
+  if ($result_check_user) {
+    $row_check_user = mysqli_fetch_assoc($result_check_user);
+    $user_count = $row_check_user['user_count'];
+
+    // Check if the user exists in the "pameldingsinfo" table
+    if ($user_count > 0) {
+      // User exists, set flag to show the button
+      $show_download_button = true;
+    } else {
+      // User does not exist, set flag to hide the button
+      $show_download_button = false;
+    }
+  } else {
+    // Query failed, handle error
+    echo "Error: " . mysqli_error($connection);
+  }
+}
+
+
+
+mysqli_close($connection);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,11 +74,11 @@ $brukernavn = $_SESSION['username'];
     <a href="prossesor.php" class="borderstyletag">komponentene</a>
     <a href="skole.php" class="borderstyletag">Skole</a>
     <a href="begreper.php" class="borderstyletag">Begreper</a>
-    <a href="FAQ.html" class="borderstyletag">FAQ</a>
+    <a href="FAQ.php" class="borderstyletag">FAQ</a>
+    <a href="saker.php" class="borderstyletag">Legg Ut Sak</a>
+    <a href="Items.php" class="borderstyletag">Kjøp!</a>
     <a href="loginforphp.php" class="borderstyletag">Log inn</a>
     <a href="registration.php" class="borderstyletag">Registrer</a>
-    <a href="Items.php" class="borderstyletag">Kjøp!</a>
-    <a href="saker.php" class="borderstyletag">Legg Ut Sak</a>
     <?php
     // Check if the user is logged in
     if (isset($_SESSION['username'])) {
@@ -38,6 +87,13 @@ $brukernavn = $_SESSION['username'];
     } else {
       // If not logged in, display a message or redirect to the login page
       echo 'You are not logged in.';
+    }
+    ?>
+    <?php
+    // Display the "List of Participants" button if the user is an admin
+    if ($usertype === 'admin') {
+      echo '<a href="besttilingeradminpage.php" class="borderstyletag">Bestillinger</a>
+    <a href="sakeradmin.php" class="borderstyletag">Saker Fra kunde</a>'; // Add your button here
     }
     ?>
   </div>
