@@ -1,6 +1,11 @@
 <?php
 session_start();
 
+if (!isset($_SESSION['username'])) {
+  header("Location: loginforphp.php");
+  exit;
+}
+
 // Step 1: Connect to the database
 $connection = mysqli_connect("localhost", "root", "Admin", "checkout");
 
