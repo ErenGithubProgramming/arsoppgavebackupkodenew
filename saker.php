@@ -117,8 +117,6 @@ mysqli_close($connection);
     <h2 class="sakerheadline">Saker</h2>
     <form method="POST" action="takkforsak.php">
       <div class="sakercontainersaker">
-        <h2 class="sakerheadline">Navn</h2>
-        <input type="texttt" placeholder="navn" class="inputstylecontainers" name="navn">
         <h2 class="sakerheadline">E-Mail</h2>
         <input type="email" placeholder="Email" class="inputstylecontainers" name="epost">
         <h2 class="sakerheadline">Sak</h2>
@@ -140,7 +138,7 @@ mysqli_close($connection);
     $emailofperson = $_POST['epost'];
     $sakofperson = $_POST['sak'];
 
-    $sql = "INSERT INTO sakerforperson (navn, epost, sak) VALUES ('$nameofperson', '$emailofperson', '$sakofperson')";
+    $sql = "INSERT INTO sakerforperson (epost, sak) VALUES ('$emailofperson', '$sakofperson')";
     $resultaltavgreia = mysqli_query($connectiontodatabase, $sql);
 
   }

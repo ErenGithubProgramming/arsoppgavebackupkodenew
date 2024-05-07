@@ -1,6 +1,19 @@
 <?php
-
 require "checkoutdatabase.php";
+
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $emailofperson = $_POST['epost'];
+    $sakofperson = $_POST['sak'];
+
+    // Insert the new record into the database
+    $sql = "INSERT INTO sakerforperson (epost, sak) VALUES ('$emailofperson', '$sakofperson')";
+    $result = mysqli_query($connectiontodatabase, $sql);
+
+    // Fetch the last inserted ID from the sakerforperson table
+    $last_id_result = mysqli_query($connectiontodatabase, "SELECT MAX(idsakerforperson) FROM sakerforperson");
+    $last_id_row = mysqli_fetch_row($last_id_result);
+    $last_id = $last_id_row[0];
+}
 ?>
 
 <!DOCTYPE html>
@@ -35,17 +48,12 @@ require "checkoutdatabase.php";
     <div class="saksnummerbackground">
         <div class="containercenter">
             <h2 class="textstyletwo">Takk for henvedelsen din, vi skal prøve å svare på din sak så fort som mulig!</h2>
-            <h2 class="textstyletwo">Saks nummer:
+            <h2 class="textstyletwo">Saksnummer:
                 <?php
-
-                $thenumber = "SELECT * FROM sakerforperson;";
-                $resultavgreie = mysqli_query($connectiontodatabase, $thenumber);
-                $resultavgreiecheck = mysqli_num_rows($resultavgreie);
-                $textBefore = "#";
-                echo '<h2 class="ticketidtext">' . $textBefore . $resultavgreiecheck . '</h2>';
-
+                // Display the last inserted ID
+                echo '<span class="ticketidtext">#' . $last_id . '</span>';
                 ?>
-
+            </h2>
         </div>
     </div>
 
@@ -53,12 +61,10 @@ require "checkoutdatabase.php";
 
     if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
-
-        $nameofperson = $_POST['navn'];
         $emailofperson = $_POST['epost'];
         $sakofperson = $_POST['sak'];
 
-        $sql = "INSERT INTO sakerforperson (navn, epost, sak) VALUES ('$nameofperson', '$emailofperson', '$sakofperson')";
+        $sql = "INSERT INTO sakerforperson (epost, sak) VALUES ('$emailofperson', '$sakofperson')";
         $resultat = mysqli_query($connectiontodatabase, $sql);
         $resultaltavgreia = mysqli_query($connectiontodatabase, $sql);
 

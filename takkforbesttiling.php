@@ -1,5 +1,20 @@
 <?php
 require "checkoutdatabase.php";
+
+
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $emailofperson = $_POST['epost'];
+    $sakofperson = $_POST['sak'];
+
+    // Insert the new record into the database
+    $sql = "INSERT INTO sakerforperson (epost, sak) VALUES ('$emailofperson', '$sakofperson')";
+    $result = mysqli_query($connectiontodatabase, $sql);
+
+    // Fetch the last inserted ID from the sakerforperson table
+    $last_id_result = mysqli_query($connectiontodatabase, "SELECT MAX(idInfocheckout) FROM infocheckout");
+    $last_id_row = mysqli_fetch_row($last_id_result);
+    $last_id = $last_id_row[0];
+}
 ?>
 
 <?php
@@ -62,12 +77,8 @@ $brukernavn = $_SESSION['username'];
     <div class="containerthankyouu">
         <h2 class="bestiilingconfirm">DIN ORDRE NUMMER ER:</h2>
         <?php
-
-        $thenumber = "SELECT * FROM infocheckout;";
-        $resultavgreie = mysqli_query($connectiontodatabase, $thenumber);
-        $resultavgreiecheck = mysqli_num_rows($resultavgreie);
-        $textBefore = "#";
-        echo '<h2 class="orderidtext">' . $textBefore . $resultavgreiecheck . '</h2>';
+        // Display the last inserted ID
+        echo '<span class="ticketidtext">#' . $last_id . '</span>';
         ?>
     </div>
 
