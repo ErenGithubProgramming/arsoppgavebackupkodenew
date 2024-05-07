@@ -62,7 +62,7 @@ CREATE TABLE `infocheckout` (
   `expyear` varchar(245) DEFAULT NULL,
   `cvc` varchar(245) DEFAULT NULL,
   PRIMARY KEY (`idInfocheckout`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -72,7 +72,10 @@ CREATE TABLE `infocheckout` (
 LOCK TABLES `infocheckout` WRITE;
 /*!40000 ALTER TABLE `infocheckout` DISABLE KEYS */;
 INSERT INTO `infocheckout` VALUES
-(1,'john','johndoe@gmail.com','new york street 12','new york','john doe','231312231231332','13/04','2029','121');
+(1,'jakob','jakoben@gmail.com','peter 9','qdqwdqd','jakob','2132131414','12/04','2029','112'),
+(2,'','','','','','','','',''),
+(3,'micahel','micahel@gmail.com','kongsberg21','kongsberg','micahel','2123213232','03/12','2029','112'),
+(4,'micahel','micahel@gmail.com','kongsberg21','kongsberg','micahel','2123213232','03/12','2029','112');
 /*!40000 ALTER TABLE `infocheckout` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -85,11 +88,10 @@ DROP TABLE IF EXISTS `sakerforperson`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `sakerforperson` (
   `idsakerforperson` int(11) NOT NULL AUTO_INCREMENT,
-  `navn` varchar(245) DEFAULT NULL,
   `epost` varchar(245) DEFAULT NULL,
   `sak` varchar(245) DEFAULT NULL,
   PRIMARY KEY (`idsakerforperson`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -99,8 +101,10 @@ CREATE TABLE `sakerforperson` (
 LOCK TABLES `sakerforperson` WRITE;
 /*!40000 ALTER TABLE `sakerforperson` DISABLE KEYS */;
 INSERT INTO `sakerforperson` VALUES
-(1,'john','doe@gmail.com','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut'),
-(2,'john','doe@gmail.com','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut');
+(1,'jakoben@gmail.com','wqdqqwdasdwqwqdwqd'),
+(10,'example@gmail.com','wqdqqwdasdwqwqdwqd'),
+(13,'doe@gmail.com','wqdqqwdasdwqwqdwqd'),
+(15,'micahel@gmail.com','');
 /*!40000 ALTER TABLE `sakerforperson` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -113,4 +117,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-05-06 17:04:53
+-- Dump completed on 2024-05-07 11:16:28
