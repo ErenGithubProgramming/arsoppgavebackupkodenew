@@ -5,10 +5,10 @@ if (isset($_POST['submit'])) {
     $passord = md5($_POST['passord']);
 
     //Koble til databasen
-    $dbc = mysqli_connect('127.0.0.1', 'root', 'Admin', 'checkout') or die('Error connecting to MySQL server.');
+    $dbc = mysqli_connect('localhost', 'root', 'Admin', 'checkout') or die('Error connecting to MySQL server.');
 
     //Gjøre klar SQL-strengen
-    $query = "SELECT brukernavn, passord from info_om_Kunde where brukernavn='$brukernavn' and passord='$passord'";
+    $query = "SELECT brukernavn, passord from info_om_kunde where brukernavn='$brukernavn' and passord='$passord'";
     echo $query;
 
     //Utføre spørringen

@@ -15,7 +15,7 @@
         <a href="begreper.php" class="borderstyletag">Begreper</a>
         <a href="FAQ.php" class="borderstyletag">FAQ</a>
         <a href="saker.php" class="borderstyletag">Legg Ut Sak</a>
-        <a href="Items.php" class="borderstyletag">Kjøp!</a>
+        <a href="items.php" class="borderstyletag">Kjøp!</a>
         <a href="loginforphp.php" class="borderstyletag">Log inn</a>
         <a href="registration.php" class="borderstyletag">Registrer</a>
         <?php
@@ -64,7 +64,7 @@ if (isset($_POST['submit'])) {
     $passord = md5($_POST['passord']);
 
     //Koble til databasen
-    $dbc = mysqli_connect('127.0.0.1', 'root', 'Admin', 'checkout')
+    $dbc = mysqli_connect('localhost', 'root', 'Admin', 'checkout')
         or die('Error connecting to MySQL server.');
 
     //Gjøre klar SQL-strengen
