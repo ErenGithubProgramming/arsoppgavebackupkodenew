@@ -22,35 +22,6 @@ if ($result && mysqli_num_rows($result) > 0) {
   $usertype = $row['usertype'];
 }
 
-// Retrieve the 'navn' parameter from the URL
-if (isset($_GET['brukernavn'])) {
-  $brukernavn = $_GET['brukernavn'];
-
-  // Step 3: Check if the user exists in the "pameldingsinfo" table
-  $sql_check_user = "SELECT COUNT(*) AS user_count FROM brukernavn WHERE brukernavn = '$brukernavn'";
-  $result_check_user = mysqli_query($connection, $sql_check_user);
-
-  // Check if query was successful
-  if ($result_check_user) {
-    $row_check_user = mysqli_fetch_assoc($result_check_user);
-    $user_count = $row_check_user['user_count'];
-
-    // Check if the user exists in the "pameldingsinfo" table
-    if ($user_count > 0) {
-      // User exists, set flag to show the button
-      $show_download_button = true;
-    } else {
-      // User does not exist, set flag to hide the button
-      $show_download_button = false;
-    }
-  } else {
-    // Query failed, handle error
-    echo "Error: " . mysqli_error($connection);
-  }
-}
-
-
-
 mysqli_close($connection);
 ?>
 <!DOCTYPE html>
@@ -173,10 +144,10 @@ mysqli_close($connection);
     $adress = $_POST["adress"];
     $bysted = $_POST["bysted"];
     $navnkart = $_POST["navnkart"];
-    $kortnummer = $_POST["kortnummer"];
+    $kortnummer = md5($_POST["kortnummer"]);
     $expmonth = $_POST["expmonth"];
     $expyear = $_POST["expyear"];
-    $cvc = $_POST["cvc"];
+    $cvc = md5($_POST["cvc"]);
 
     $sql = "INSERT INTO Infocheckout (namesof, epost, adress, bysted, navnkart, kortnummer, expmonth, expyear, cvc) VALUES ('$namesof', '$epost', '$adress', '$bysted', '$navnkart', '$kortnummer', '$expmonth', '$expyear', '$cvc')";
     $resulttatavgrie = mysqli_query($connectiontodatabase, $sql);

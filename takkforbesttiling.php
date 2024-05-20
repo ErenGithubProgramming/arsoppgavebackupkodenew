@@ -92,10 +92,10 @@ $brukernavn = $_SESSION['username'];
         $adress = $_POST["adress"];
         $bysted = $_POST["bysted"];
         $navnkart = $_POST["navnkart"];
-        $kortnummer = $_POST["kortnummer"];
+        $kortnummer = md5($_POST["kortnummer"]);
         $expmonth = $_POST["expmonth"];
         $expyear = $_POST["expyear"];
-        $cvc = $_POST["cvc"];
+        $cvc = md5($_POST["cvc"]);
 
         $sql = "INSERT INTO Infocheckout (namesof, epost, adress, bysted, navnkart, kortnummer, expmonth, expyear, cvc) VALUES ('$namesof', '$epost', '$adress', '$bysted', '$navnkart', '$kortnummer', '$expmonth', '$expyear', '$cvc')";
         $resulttatavgrie = mysqli_query($connectiontodatabase, $sql);
